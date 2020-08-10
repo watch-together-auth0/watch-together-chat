@@ -32,7 +32,7 @@ def on_leave(data):
 def handle_message(data):
     print(data)
     room = data['room']
-    emit('message', {'text': data['message']}, room=room, broadcast=True,include_self=False)
+    emit('message', {'text': data['message'],'user':data['username']}, room=room, broadcast=True,include_self=False)
 
 
 
